@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/static/css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="/static/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="/static/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/sty.css" type="text/css">
     <link rel="stylesheet" href="/static/css/scrolling-nav.css" type="text/css">
     <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,7 +32,7 @@
 <body>
 {% include "shared-header.html" %}
 
-<div class="bg-image container"></div>
+<div class="bg-image container-fluid"></div>
 <div class="row">
 <div class="bg-text good">
   <h1>Looking for Adds to Display?</h1>
@@ -43,6 +43,32 @@
 </div>
 
 </div>
+<!--recommended sites-->
+<section class="categories">
+        <div class="row">
+            <div class="col-lg-12">
+                    <div class="section-title test4">
+                        <h2>Recommended Outdoor Media</h2>
+                    </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="categories__slider owl-carousel">
+                    {% for rec in recommend.all %}
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="{{rec.image.url}}"  >
+                            <h5><a href="#">{{rec.summary}}</a></h5>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                </div>
+        </div>
+
+    </section>
+    <!-- partners -->
 
 <!--features-->
 
@@ -240,54 +266,29 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-1.jpg" alt="">
+                    <div class="row">
+                        {% for blog in allblog %}
+                        <div class="col-sm-4">
+                            <div class="blog__item">
+                                <div class="blog__item__pic">
+                                   <a href="blog/{{ blog.id }}/"> <img class = "image-fluid" src="{{blog.image.url}}" height = 258 width=200 /></a>
+                                </div>
+                                <div class="blog__item__text">
+                                    <ul>
+                                        <li><i class="fa fa-calendar-o"></i> {{blog.date_pretty}}</li>
+                                        <li><i class="fa fa-comment-o"></i> {{blog.Comment}}</li>
+                                    </ul>
+                                    <h5><a href="blog/{{ blog.id }}/">{{blog.summary}}</a></h5>
+                                    <p>{{blog.text_pretty}}</p>
+                                    <a href="blog/{{ blog.id }}/" class="blog__btn">READ MORE</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="blog__item__text">
-                            <ul>
-                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                <li><i class="fa fa-comment-o"></i> 5</li>
-                            </ul>
-                            <h5><a href="#">Cooking tips make cooking simple</a></h5>
-                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                        {% endfor %}
+
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-2.jpg" alt="">
                         </div>
-                        <div class="blog__item__text">
-                            <ul>
-                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                <li><i class="fa fa-comment-o"></i> 5</li>
-                            </ul>
-                            <h5><a href="#">6 ways to prepare breakfast for 30</a></h5>
-                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic">
-                            <img src="img/blog/blog-3.jpg" alt="">
-                        </div>
-                        <div class="blog__item__text">
-                            <ul>
-                                <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
-                                <li><i class="fa fa-comment-o"></i> 5</li>
-                            </ul>
-                            <h5><a href="#">Visit the clean farm in the US</a></h5>
-                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </section>
 
 

@@ -2,8 +2,8 @@ from django.shortcuts import render,get_object_or_404
 from .models import Blog
 from django.core.paginator import Paginator
 
-def blogs(request):
 
+def blogs(request):
 
     allblog = Blog.objects.all()
     p = Paginator(allblog, 12)
@@ -13,6 +13,7 @@ def blogs(request):
     # return render(request, 'list.html', {'page_obj': page_obj})
 
     return render(request,'blog.html', {'allblog' : page_obj})
+
 
 def detail(request,blog_id):
 
