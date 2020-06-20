@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>detail</title>
-       <meta charset="UTF-8">
+    <title>detailout</title>
+           <meta charset="UTF-8">
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
@@ -35,11 +35,11 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>{{ detailboard.name }}</h2>
+                        <h2>{{ detailout.name }}</h2>
                         <div class="breadcrumb__option">
                             <a href="/">Home</a>
-                            <a href="">{{ detailboard.Category }}</a>
-                            <span>{{ detailboard.name }}</span>
+                            <a href="">{{ detailout.Category }}</a>
+                            <span>{{ detailout.name }}</span>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
                             <img class="product__details__pic__item--large"
-                                src="{{ detailboard.image.url }}" alt="">
+                                src="{{ detailout.image.url }}" alt="">
                         </div>
 
 {#                        <div class="product__details__pic__slider owl-carousel">#}
@@ -73,24 +73,24 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
-                        <h3>{{ detailboard.name }}</h3>
+                        <h3>{{ detailout.name }}</h3>
 
-                        <div class="product__details__price">{{ detailboard.price }} Rs</div>
+                        <div class="product__details__price">{{ detailout.price }} Rs</div>
                         <p>{{ detailboard.description }}</p>
                         <div class=" product__details__quantity">
                             <div class="quantity">
                                 Call to Order:
                             </div>
                         </div>
-                        <a href="tel:{{ config.phone_number }}" class="primary-btn test1">{{ detailboard.Phone }}</a>
+                        <a href="tel:{{ config.phone_number }}" class="primary-btn test1">{{ detailout.Phone }}</a>
                         <ul>
-                            <li><b>Availability</b> <span>{{detailboard.availability}}</span></li>
-                            <li><b>Area Covered</b> <span>{{ detailboard.Areacoverd }} </span></li>
+                            <li><b>Availability</b> <span>{{detailout.availability}}</span></li>
+                            <li><b>Area Covered</b> <span>{{ detailout.Areacoverd }} </span></li>
 
                             <li><b>Share on</b>
                                 <div class="share">
-                                    <a href="{{detailboard.facebook}}"><i class="fa fa-facebook"></i></a>
-                                    <a href="{{detailboard.insta}}"><i class="fa fa-instagram"></i></a>
+                                    <a href="{{detailout.facebook}}"><i class="fa fa-facebook"></i></a>
+                                    <a href="{{detailout.insta}}"><i class="fa fa-instagram"></i></a>
                                 </div>
                             </li>
                         </ul>
@@ -104,11 +104,6 @@
         </div>
     </section>
     <!-- Product Details Section End -->
-
-
-
-
-
 
 {% include 'shared-footer.html' %}
 </body>
