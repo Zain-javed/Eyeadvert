@@ -1061,8 +1061,7 @@ background:#0e9aa7 ;
 .breadcrumb-section {
 	display: flex;
 	align-items: center;
-	padding: 50px 0 40px;
-	padding-top: 180px;
+	padding-top: 100px;
 }
 
 .breadcrumb__text h2 {
@@ -3475,7 +3474,7 @@ background:#0e9aa7 ;
 		-ms-transform: translateX(-125px);
 		transform: translateX(-125px);
 	}
-	.map .map-inside .inside-widget {
+	.map .map-inside .inside-widget
 		width: 250px;
 	}
 	.product__details__tab .nav-tabs li {
