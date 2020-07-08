@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>detail</title>
+    <title>EyeAdvert | Billboard</title>
        <meta charset="UTF-8">
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
@@ -39,7 +39,7 @@
                         <div class="breadcrumb__option">
                             <a href="/">Home</a>
                             <a href="">{{ detailboard.Category }}</a>
-                            <span>{{ detailboard.name }}</span>
+                            <span>{{ detailboard.Company }}</span>
                         </div>
                     </div>
                 </div>
@@ -84,6 +84,7 @@
                         </div>
                         <a href="tel:{{ config.phone_number }}" class="primary-btn test1">{{ detailboard.Phone }}</a>
                         <ul>
+                            <li><b>Medium</b> <span>{{detailboard.Medium}}</span></li>
                             <li><b>Availability</b> <span>{{detailboard.availability}}</span></li>
                             <li><b>Area Covered</b> <span>{{ detailboard.Areacoverd }} </span></li>
 

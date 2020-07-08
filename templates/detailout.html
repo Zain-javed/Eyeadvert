@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>detailout</title>
+    <title>EyeAdvert | Outdoor</title>
            <meta charset="UTF-8">
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
@@ -39,7 +39,7 @@
                         <div class="breadcrumb__option">
                             <a href="/">Home</a>
                             <a href="">{{ detailout.Category }}</a>
-                            <span>{{ detailout.name }}</span>
+                            <span>{{ detailout.Company }}</span>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                         <h3>{{ detailout.name }}</h3>
 
                         <div class="product__details__price">{{ detailout.price }} Rs</div>
-                        <p>{{ detailboard.description }}</p>
+                        <p>{{ detailout.description }}</p>
                         <div class=" product__details__quantity">
                             <div class="quantity">
                                 Call to Order:
@@ -84,6 +84,7 @@
                         </div>
                         <a href="tel:{{ config.phone_number }}" class="primary-btn test1">{{ detailout.Phone }}</a>
                         <ul>
+                            <li><b>Medium</b> <span>{{detailout.Medium}}</span></li>
                             <li><b>Availability</b> <span>{{detailout.availability}}</span></li>
                             <li><b>Area Covered</b> <span>{{ detailout.Areacoverd }} </span></li>
 

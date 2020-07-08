@@ -5,13 +5,13 @@ from advertise.models import Billboard
 from advertise.models import Outdoor
 
 
-def home(request,):
+def home(request):
 
     context = {
          'recommend': Recommend.objects,
          'billadd' : Billboard.objects,
           'outadd' : Outdoor.objects,
-        'allblog': Blog.objects.filter()[:4]
+        'allblog': Blog.objects.filter()[:3]
     }
     return render(request,'home1.html',context)
 # Create your views here.
