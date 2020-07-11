@@ -19,7 +19,6 @@ def signup(request):
         return render(request, 'signup.html')
 
 
-
 def login(request):
     if request.method == 'POST':
         user = auth.authenticate(username=request.POST['username'], password=request.POST['password'])
