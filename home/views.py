@@ -13,5 +13,5 @@ def home(request):
           'outadd' : Outdoor.objects,
         'allblog': Blog.objects.filter()[:3]
     }
-    return render(request,'home1.html',context)
+    return render(request,'index.html',context)
 # Create your views here.
