@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 
-def contact(request):
-    return render(request,'contact.html')
+def contactus(request):
+    return render(request,'contact us.html')
 
 
 def services(request):
