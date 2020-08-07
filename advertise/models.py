@@ -12,8 +12,8 @@ class Billboard(models.Model):
     availability = models.CharField(max_length=50,default='Available')
     Phone=models.CharField(max_length=30,default='+92')
     Areacoverd= models.CharField(max_length=100,default='Fotress')
-    facebook=models.CharField(max_length=30,default='http://')
-    insta=models.CharField(max_length=30,default='http://')
+    facebook=models.CharField(max_length=100,default='https://www.facebook.com/EyeAdvert-111649233951911')
+    insta=models.CharField(max_length=100,default='https://www.instagram.com/?hl=en')
 
 
     def __str__(self):
@@ -31,8 +31,8 @@ class Outdoor(models.Model):
     availability = models.CharField(max_length=50, default='Available')
     Phone = models.CharField(max_length=30, default='+92')
     Areacoverd = models.CharField(max_length=100, default='Fotress')
-    facebook = models.CharField(max_length=30, default='http://')
-    insta = models.CharField(max_length=30, default='http://')
+    facebook = models.CharField(max_length=100, default='https://www.facebook.com/EyeAdvert-111649233951911')
+    insta = models.CharField(max_length=100, default='https://www.instagram.com/?hl=en')
 
     def __str__(self):
         return self.name
